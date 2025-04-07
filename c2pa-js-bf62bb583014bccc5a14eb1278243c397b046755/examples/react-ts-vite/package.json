@@ -1,0 +1,26 @@
+{
+  "name": "react-ts-vite",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:release": "rushx build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@contentauth/react": "workspace:*",
+    "c2pa": "workspace:*",
+    "c2pa-wc": "workspace:*",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.13.1",
+    "@types/react-dom": "^16.9.9",
+    "@vitejs/plugin-react": "^1.1.0",
+    "postcss": "~8.4.12",
+    "postcss-nesting": "^10.0.2",
+    "typescript": "~4.6.3",
+    "vite": "^3.0.4"
+  }
+}

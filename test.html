@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C2PA Extension Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .image-container {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .status {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>C2PA Extension Test</h1>
+    <p>This page contains a test image with C2PA metadata. The extension should blur this image if it's working correctly.</p>
+    
+    <div class="image-container">
+        <h2>Test Image (new-card.png)</h2>
+        <img src="new-card.png" alt="Test C2PA Image">
+        <div class="status">
+            Status: <span id="status">Checking...</span>
+        </div>
+    </div>
+
+    <script>
+        // Simple script to check if the extension is running
+        const img = document.querySelector('img');
+        const status = document.getElementById('status');
+        
+        // Check if the image has the c2pa-blurred class after a short delay
+        setTimeout(() => {
+            if (img.classList.contains('c2pa-blurred')) {
+                status.textContent = 'Image blurred - Extension working!';
+                status.style.color = 'green';
+            } else {
+                status.textContent = 'Image not blurred - Extension may not be working';
+                status.style.color = 'red';
+            }
+        }, 2000);
+    </script>
+</body>
+</html> 
