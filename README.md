@@ -1,4 +1,6 @@
-AI-Block
+<img src="./ai-block.png" alt="Screenshot" width="100"/>
+
+<b>AI-Block</b>
 
 Ad-block, but for AI-generated content.
 A Chrome extension that detects and blocks AI-generated media using C2PA metadata.
